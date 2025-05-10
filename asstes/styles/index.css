@@ -1,7 +1,10 @@
 :root {
   --line-height-one-hundred: 100%;
-  --yellow-color: rgba(253, 222, 103, 1);
   --section-distance: 70px;
+  --yellow-color: rgba(253, 222, 103, 1);
+  --green-color: rgba(59, 95, 71, 1);
+  --black-color: rgba(24, 24, 24, 1);
+  --white-color: rgba(255, 255, 255, 1);
 }
 
 * {
@@ -79,7 +82,7 @@ body {
   width: 21px;
   height: 21px;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 1);
+  background-color: var(--white-color);
 }
 
 
@@ -98,7 +101,7 @@ body {
 .hero .right .inside .bar p{
   --price-weight : 500;
   --price-size : 36px;
-  --price-color:rgba(255, 255, 255, 1);
+  --price-color:var(--white-color);
   font-weight: var(--price-weight);
   font-size: var(--price-size);
   line-height: var(--line-height-one-hundred);
@@ -161,11 +164,10 @@ body {
 .hero .right .inside p {
   --price-weight: 500;
   --price-size: 36px;
-  --price-color: rgba(255, 255, 255, 1);
   font-weight: var(--price-weight);
   font-size: var(--price-size);
   line-height: var(--line-height-one-hundred);
-  color: var(--price-color);
+  color: var(--white-color);
   position: absolute;
   left: 134px;
   top: 79px;
@@ -240,14 +242,13 @@ body {
   --header-weight: 900;
   --header-size: 112px;
   --line-height-one-hundred: 100px;
-  --header-color: rgba(255, 255, 255, 1);
   padding: 0;
   margin: 0 0 24px 0;
   font-weight: var(--header-weight);
   font-size: var(--header-size);
   line-height: var(--line-height-one-hundred);
   letter-spacing: 13%;
-  color: var(--header-color);
+  color: var(--white-color);
 }
 
 .hero .left p:nth-of-type(2) {
@@ -266,8 +267,13 @@ body {
   text-decoration: none;
   border-radius: 6px;
   padding: 16px 40px;
-  background-color: var(--yellow-color);
   display: inline-block;
+}
+
+.y-btn a {
+  background-color: var(--yellow-color);
+  color: var(--black-color);
+
 }
 
 
@@ -347,8 +353,8 @@ body {
 
 }
 
-.best-sellers .item .show{
-  background-color: rgba(255, 255, 255, 1);
+.best-sellers .item .show {
+  background-color: var(--white-color);
   border-radius: 24px;
 
 }
@@ -365,16 +371,14 @@ body {
   margin: 0;
 }
 
-.best-sellers .item .show .color p{
+.best-sellers .item .show .color p {
   --discount: 3px;
-  padding: 3px calc(var(--discount)*2) ;
+  padding: 3px calc(var(--discount)*2);
   border-radius: calc(var(--discount)*2);
   background-color: rgba(58, 94, 70, 1);
 }
 
-.best-sellers .item .show .heart img {
-
-}
+.best-sellers .item .show .heart img {}
 
 .best-sellers .item .show picture img {
   width: 100%;
@@ -390,23 +394,100 @@ body {
   /* background-color: rgb(15, 219, 15); */
 }
 
-.best-sellers .item .price p{
+.best-sellers .item .price p {
   padding: 0;
   margin: 16px 0 0;
 }
 
-.best-sellers .item .price img {
+.item .price img {
   background-color: var(--yellow-color);
   padding: 11px;
 }
 
 
+.best-sellers .b-btn {
+  text-align: center;
+}
+
+.best-sellers .b-btn a {
+  background-color: var(--black-color);
+  color: var(--white-color);
+  margin: 70px 0;
+}
 
 
+footer {
+  background: linear-gradient(to right, var(--yellow-color) 35%, var(--green-color) 35%);
+  /* background-color: bisque; */
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer .left {
+  width: 34.5%;
+  padding: 78px 20px;
+  flex-shrink: 0;
+  border: 2px salmon solid;
+}
 
 
+.footer .right {
+  flex-grow: 1;
+  padding: 78px 0 78px 90px;
+  border: 2px rgb(4, 12, 119) solid;
 
+}
 
+.footer .right ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 48px;
+
+}
+
+.footer .right li {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+
+}
+
+.footer .right li .item {
+  font-family: Roboto;
+}
+
+.footer .right li .item .counter {
+
+  --counter-weight: 700;
+  --counter-size: 64px;
+  font-weight: var(--counter-weight);
+  font-size: var(--counter-size);
+  line-height: 48px;
+  color: var(--white-color);
+
+  background-color: rgba(24, 24, 24, 0.25);
+  margin: 0;
+  padding: 24px;
+  width: 153px;
+  height: 112px;
+}
+
+.footer .right li .item .remain {
+
+  --counter-weight: 300;
+  --counter-size: 24px;
+  font-weight: var(--counter-weight);
+  font-size: var(--counter-size);
+  line-height: var(--line-height-one-hundred);
+  color: var(--white-color);
+
+}
 
 
 
