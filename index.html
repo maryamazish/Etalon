@@ -20,10 +20,10 @@
                 <h1>Etalon</h1>
                 <nav>
                     <ul>
-                        <li class="menu"><a href="#">Home</a></li>
-                        <li class="menu"><a href="#">Store</a></li>
-                        <li class="menu"><a href="#">New</a></li>
-                        <li class="menu"><a href="#">Contact</a></li>
+                        <li><a class="menu home" href="#">Home</a></li>
+                        <li><a class="menu" href="#">Store</a></li>
+                        <li><a class="menu" href="#">New</a></li>
+                        <li><a class="menu" href="#">Contact</a></li>
                     </ul>
                 </nav>
                 <img src="./asstes/images/basket.png" alt="">
@@ -38,18 +38,21 @@
                 </div>
                 <div class="right">
                     <div class="inside">
-                        <!-- <div class="bar"> -->
                         <p>$299</p>
                         <div>40% OFF</div>
                         <div></div>
                         <div></div>
-                        <img src="./asstes/images/man.png" title="">
-                        <!-- </div> -->
+                        <img class="man" src="./asstes/images/man.png" title="">
+                        <img class="arrow-left" src="./asstes/images/arrowkey.svg" title="">
+                        <img class="arrow-right" src="./asstes/images/arrowkey-w.svg" title="">
                     </div>
                     <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
+                        <li class="white-bullet">
+                            <!-- <input id="switch" type="checkbox" />
+                            <label for="switch">fdgdfgf</label> -->
+                        </li>
+                        <li class="gray-bullet"></li>
+                        <li class="gray-bullet"></li>
                     </ul>
                 </div>
             </div>
@@ -75,13 +78,15 @@
             <div class="collection">
                 <div class="jacket">
                     <p>Men’s Jacket Collection</p>
+                    <div class="btn-wrapper b-btn"><a href="#">Discover Now</a></div>
                     <img src="./asstes/images/menjacket.png" alt="">
                 </div>
                 <div class="sunglasses">
+                    <div class="btn-wrapper b-btn"><a href="#">Discover Now</a></div>
                     <img src="./asstes/images/mensunglasses.png" alt="">
                     <div>
                         <p>Men’s Sunglasses Collection</p>
-                        <p>40% OFF</p>
+                        <p class="off">40% OFF</p>
                     </div>
                 </div>
             </div>
@@ -95,7 +100,7 @@
             <ul class="product">
                 <li class="col">
                     <div class="item">
-                        <div class="show">
+                        <div class="products">
                             <div class="heart">
                                 <p></p>
                                 <img src="./asstes/images/heart.svg" alt="" />
@@ -105,10 +110,10 @@
                                 <img src="./asstes/images/bag.png" alt="" />
                             </picture>
                         </div>
-                        <div class="price">
+                        <div class="name-price">
                             <div>
-                                <p>Fjallraven Backpack</p>
-                                <p>$109.95</p>
+                                <p class="name">Fjallraven Backpack</p>
+                                <p class="price">$109.95</p>
                             </div>
                             <picture>
                                 <source media="(min-width: 700px)" srcset="./asstes/images/shopping-cart-m.svg" />
@@ -122,7 +127,7 @@
 
                 <li class="col">
                     <div class="item">
-                        <div class="show">
+                        <div class="products">
                             <div class="heart">
                                 <p></p>
                                 <img src="./asstes/images/heart.svg" alt="" />
@@ -132,10 +137,10 @@
                                 <img src="./asstes/images/jacket.png" alt="" />
                             </picture>
                         </div>
-                        <div class="price">
+                        <div class="name-price">
                             <div>
-                                <p>Fjallraven Backpack</p>
-                                <p>$109.95</p>
+                                <p class="name">Fjallraven Backpack</p>
+                                <p class="price">$109.95</p>
                             </div>
                             <picture>
                                 <source media="(min-width: 700px)" srcset="./asstes/images/shopping-cart-m.svg" />
@@ -148,7 +153,7 @@
 
                 <li class="col">
                     <div class="item">
-                        <div class="show">
+                        <div class="products">
                             <div class="heart">
                                 <p></p>
                                 <img src="./asstes/images/heart.svg" alt="" />
@@ -158,10 +163,10 @@
                                 <img src="./asstes/images/tshirt.png" alt="" />
                             </picture>
                         </div>
-                        <div class="price">
+                        <div class="name-price">
                             <div>
-                                <p>Fjallraven Backpack</p>
-                                <p>$109.95</p>
+                                <p class="name">Fjallraven Backpack</p>
+                                <p class="price">$109.95</p>
                             </div>
                             <picture>
                                 <source media="(min-width: 700px)" srcset="./asstes/images/shopping-cart-m.svg" />
@@ -174,7 +179,7 @@
 
                 <li class="col">
                     <div class="item">
-                        <div class="show">
+                        <div class="products">
                             <div class="heart color">
                                 <p>-30%</p>
                                 <img src="./asstes/images/heart.svg" alt="" />
@@ -184,10 +189,10 @@
                                 <img src="./asstes/images/sweater.png" alt="" />
                             </picture>
                         </div>
-                        <div class="price">
+                        <div class="name-price">
                             <div>
-                                <p>Fjallraven Backpack</p>
-                                <p>$109.95</p>
+                                <p class="name">Fjallraven Backpack</p>
+                                <p class="price">$109.95</p>
                             </div>
                             <picture>
                                 <source media="(min-width: 700px)" srcset="./asstes/images/shopping-cart-m.svg" />
@@ -203,11 +208,10 @@
     </section>
 
     <footer>
-
         <div class="container">
             <div class="footer">
                 <div class="left">
-                    <p>70% OFF</p>
+                    <p >70% OFF</p>
                     <img src="./asstes/images/shoes.png" alt="" />
                 </div>
                 <div class="right">
@@ -238,16 +242,10 @@
                             </div>
                         </li>
                     </ul>
-
-
                 </div>
-
-
             </div>
         </div>
     </footer>
-
-
 
 </body>
 
