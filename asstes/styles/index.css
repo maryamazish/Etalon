@@ -1,5 +1,5 @@
 :root {
-  --line-height-one-hundred: 100%;
+  --one-hundred-percent: 100%;
   --section-distance: 70px;
   --yellow-color: rgba(253, 222, 103, 1);
   --green-color: rgba(59, 95, 71, 1);
@@ -83,12 +83,50 @@ body {
 }
 
 .hero {
-  margin-top: 63px;
   display: flex;
-  justify-content: space-between;
-  align-items: start;
-  gap: 24px;
 }
+
+.hero .left p:nth-of-type(1) {
+  --year-weight: 400;
+  --year-color: var(--gray-color);
+  padding: 0;
+  margin: 0 0 24px 0;
+  font-weight: var(--year-weight);
+  line-height: var(--one-hundred-percent);
+  color: var(--year-color);
+
+}
+
+.hero .left h2 {
+  --header-weight: 900;
+  --one-hundred-percent: 100px;
+  padding: 0;
+  margin: 0 0 24px 0;
+  font-weight: var(--header-weight);
+  color: var(--white-color);
+}
+
+.hero .left p:nth-of-type(2) {
+  --sale-weight: 400;
+  --sale-color: rgba(255, 255, 255, 0.8);
+  padding: 0;
+  font-weight: var(--sale-weight);
+  line-height: var(--one-hundred-percent);
+  color: var(--sale-color);
+}
+
+.btn-wrapper a {
+  text-decoration: none;
+  border-radius: 6px;
+  padding: 16px 40px;
+  display: inline-block;
+}
+
+.hero .left .y-btn a {
+  background-color: var(--yellow-color);
+  color: var(--black-color);
+}
+
 
 .hero .right {
   flex-grow: 1;
@@ -98,14 +136,14 @@ body {
   align-items: center;
 }
 
-.hero .right ul {
-  flex-shrink: 1;
+.hero ul {
+  flex-shrink: 0;
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.hero .right .white-bullet {
+.hero .white-bullet {
   margin-bottom: 21px;
   width: 21px;
   height: 21px;
@@ -116,7 +154,7 @@ body {
 /* .white-bullet input:checked ~ label {
 } */
 
-.hero .right .gray-bullet {
+.hero .gray-bullet {
   margin-bottom: 21px;
   width: 16px;
   height: 16px;
@@ -124,12 +162,6 @@ body {
   background-color: var(--gray-color2);
 }
 
-
-/* .hero .right .inside {
-  flex-grow: 1;
-  text-align: center;
-  padding: 0 134px;
-} */
 
 .hero .right .inside {
   flex-grow: 1;
@@ -142,7 +174,7 @@ body {
   --price-size: 36px;
   font-weight: var(--price-weight);
   font-size: var(--price-size);
-  line-height: var(--line-height-one-hundred);
+  line-height: var(--one-hundred-percent);
   color: var(--white-color);
   position: absolute;
   left: 134px;
@@ -160,7 +192,7 @@ body {
   background-color: rgba(253, 222, 103, 1);
   font-weight: var(--off-weight);
   font-size: var(--off-size);
-  line-height: var(--line-height-one-hundred);
+  line-height: var(--one-hundred-percent);
   color: var(--off-color);
   position: absolute;
   left: 229px;
@@ -169,30 +201,22 @@ body {
 }
 
 .hero .right .inside div:nth-of-type(2) {
-  width: 308px;
-  height: 308px;
   border-radius: 50%;
   background-color: rgba(27, 45, 34, 1);
   position: absolute;
-  right: 134px;
-  top: 126px;
   z-index: 0;
 }
 
 .hero .right .inside div:nth-of-type(3) {
-  width: 318px;
-  height: 318px;
   border-radius: 50%;
   background-color: rgba(27, 45, 34, 1);
   position: absolute;
-  left: 134px;
-  top: 234px;
   z-index: 0;
 }
 
 .hero .right .inside .man {
+  /* vertical-align: bottom; */
   position: relative;
-  vertical-align: bottom;
 }
 
 .hero .right .inside .arrow-left {
@@ -206,66 +230,6 @@ body {
   bottom: 32px;
   left: 203px;
   transform: rotate(180deg);
-}
-
-.hero .left {
-  margin-top: 25px;
-  width: 35%;
-  /* background-color: brown; */
-}
-
-.hero .left p:nth-of-type(1) {
-  --year-weight: 400;
-  --year-size: 60px;
-  --year-color: var(--gray-color);
-  padding: 0;
-  margin: 0 0 24px 0;
-  font-weight: var(--year-weight);
-  font-size: var(--year-size);
-  line-height: var(--line-height-one-hundred);
-  color: var(--year-color);
-
-}
-
-.hero .left h2 {
-  --header-weight: 900;
-  --header-size: 112px;
-  --line-height-one-hundred: 100px;
-  padding: 0;
-  margin: 0 0 24px 0;
-  font-weight: var(--header-weight);
-  font-size: var(--header-size);
-  line-height: var(--line-height-one-hundred);
-  letter-spacing: 13%;
-  color: var(--white-color);
-}
-
-.hero .left p:nth-of-type(2) {
-  --year-weight: 400;
-  --year-size: 25px;
-  --year-color: rgba(255, 255, 255, 0.8);
-  padding: 0;
-  margin: 0 0 50px 0;
-  font-weight: var(--year-weight);
-  font-size: var(--year-size);
-  line-height: var(--line-height-one-hundred);
-  color: var(--year-color);
-}
-
-.btn-wrapper a {
-  text-decoration: none;
-  border-radius: 6px;
-  padding: 16px 40px;
-  display: inline-block;
-}
-
-.hero .left .y-btn a {
-  background-color: var(--yellow-color);
-  color: var(--black-color);
-}
-
-.hero .left .y-btn:hover a {
-  background-color: rgba(255, 235, 157, 1);
 }
 
 
@@ -357,6 +321,7 @@ body {
   justify-content: space-around;
   align-items: end;
   position: relative;
+  border-radius: 24px;
 }
 
 
@@ -366,7 +331,7 @@ body {
   --off-size: 48px;
   font-weight: var(--new-collection-weight);
   font-size: var(--off-size);
-  line-height: var(--line-height-one-hundred);
+  line-height: var(--one-hundred-percent);
   color: var(--black-color2);
 }
 
@@ -420,7 +385,7 @@ body {
   --discount-color: rgba(255, 255, 255, 1);
   font-weight: var(--discount-weight);
   font-size: var(--discount-size);
-  line-height: var(--line-height-one-hundred);
+  line-height: var(--one-hundred-percent);
   color: var(--discount-color);
 }
 
@@ -450,7 +415,7 @@ body {
   --name-size: 18px;
   font-weight: var(--name-weight);
   font-size: var(--name-size);
-  line-height: var(--line-height-one-hundred);
+  line-height: var(--one-hundred-percent);
   color: var(--black-color2);
 }
 
@@ -460,7 +425,7 @@ body {
   --name-color: rgba(0, 0, 0, 0.6);
   font-weight: var(--name-weight);
   font-size: var(--name-size);
-  line-height: var(--line-height-one-hundred);
+  line-height: var(--one-hundred-percent);
   color: var(--name-color);
 }
 
@@ -557,22 +522,156 @@ footer {
   --counter-size: 24px;
   font-weight: var(--counter-weight);
   font-size: var(--counter-size);
-  line-height: var(--line-height-one-hundred);
+  line-height: var(--one-hundred-percent);
   color: var(--white-color);
 }
 
 
 
 /* Greater than or equal to 1000px */
-/* @media (width >=1000px) {} */
+@media (width >=1000px) {
+
+  .hero {
+    margin-top: 63px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+
+  }
+
+  .hero .left {
+    margin-top: 25px;
+    width: 35%;
+  }
+
+  .hero .left p:nth-of-type(1) {
+    --year-size: 60px;
+    font-size: var(--year-size);
+  }
+
+  .hero .left h2 {
+    --header-size: 112px;
+    font-size: var(--header-size);
+    line-height: var(--one-hundred-percent);
+    letter-spacing: 13%;
+  }
+
+  .hero .left p:nth-of-type(2) {
+    --sale-size: 25px;
+    font-size: var(--sale-size);
+    margin: 0 0 50px 0;
+
+  }
+
+  .hero .left .y-btn:hover a {
+    background-color: rgba(255, 235, 157, 1);
+  }
+
+  .hero .right .inside div:nth-of-type(2) {
+    width: 308px;
+    height: 308px;
+    right: 134px;
+    top: 126px;
+  }
+
+  .hero .right .inside div:nth-of-type(3) {
+    width: 318px;
+    height: 318px;
+    left: 134px;
+    top: 234px;
+  }
+
+  .hero .right .inside .man {
+    vertical-align: bottom;
+  }
+
+  .menubar * {
+    display: none;
+  }
+
+}
 
 /* Less than or equal to 700px */
 @media (width <=700px) {
   .container {
     width: 100%;
-    margin-right: auto;
-    margin-left: auto;
   }
+
+  .hero {
+    margin-top: 27px;
+    padding-left: 24px;
+    flex-direction: column;
+    justify-content: left;
+    height: auto;
+  }
+
+  .hero .left p:nth-of-type(1) {
+    --year-size: 30px;
+    font-size: var(--year-size);
+  }
+
+  .hero .left h2 {
+    --header-size: 60px;
+    font-size: var(--header-size);
+    line-height: calc(var(--one-hundred-percent)/2);
+    letter-spacing: 13%;
+  }
+
+  .hero .left p:nth-of-type(2) {
+    --sale-size: 18px;
+    font-size: var(--sale-size);
+    margin: 0 0 24px 0;
+
+  }
+
+  .hero .left .y-btn a {
+    position: relative;
+    z-index: 3;
+    padding: 12px 40px;
+  }
+
+  .hero .right .inside div:nth-of-type(2) {
+    width: 192px;
+    height: 192px;
+    right: 28px;
+    top: 30px;
+  }
+
+  .hero .right .inside div:nth-of-type(3) {
+    width: 198px;
+    height: 198px;
+    left: 28px;
+    top: 80px;
+  }
+
+  .hero .right .inside .man {
+    top: -22px;
+  }
+
+  .hero ul {
+    text-align: center;
+    position: relative;
+    bottom: 110px;
+  }
+
+  .hero ul li {
+    display: inline-block;
+    margin-left: 16px;
+  }
+
+  .menubar {
+    width: 100%;
+    background-color: var(--yellow-color);
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 18px;
+  }
+
+  .nav *,
+  .desktop {
+    display: none;
+  }
+
 }
 
 /* Between 700px and 1000px */
