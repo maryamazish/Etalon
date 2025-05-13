@@ -349,6 +349,14 @@ body {
   padding: 16px;
 }
 
+input{
+  opacity: 0;
+}
+
+.best-sellers .item .products .heart input:checked ~ label .red-heart {
+  filter: invert(50%) sepia(100%) hue-rotate(2deg) brightness(100%) saturate(10);
+}
+
 .best-sellers .item .products .heart p {
   margin: 0;
 }
@@ -654,14 +662,14 @@ footer {
   .hero .right .inside div:nth-of-type(2) {
     width: 192px;
     height: 192px;
-    right: 28px;
+    right: 154px;
     top: 30px;
   }
 
   .hero .right .inside div:nth-of-type(3) {
     width: 198px;
     height: 198px;
-    left: 28px;
+    left: 164px;
     top: 80px;
   }
 
@@ -686,6 +694,8 @@ footer {
     display: flex;
     justify-content: space-between;
     padding: 12px 18px;
+    position: sticky;
+    bottom: 0;
   }
 
   .brands ul {
