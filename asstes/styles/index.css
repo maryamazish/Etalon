@@ -144,16 +144,30 @@ body {
   margin: 0;
 }
 
+/* .gray-bullet {
+  margin-bottom: 21px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: var(--gray-color2);
+} */
+
+.hero #change1:checked~.first,
+.hero #change2:checked~.second,
+.hero #change3:checked~.third {
+  border-radius: 50%;
+  background-color: var(--white-color);
+  transform: scale(1.2);
+}
+
 .hero .white-bullet {
   margin-bottom: 21px;
   width: 21px;
   height: 21px;
   border-radius: 50%;
   background-color: var(--white-color);
+  cursor: pointer;
 }
-
-/* .white-bullet input:checked ~ label {
-} */
 
 .hero .gray-bullet {
   margin-bottom: 21px;
@@ -357,9 +371,14 @@ input {
   filter: invert(50%) sepia(100%) hue-rotate(1deg) brightness(100%) saturate(10);
 }
 
-/* .best-sellers .item .products .heart input:checked~label svg {
-  fill: #e60b0b;
-} */
+
+.best-sellers .item .products .heart label {
+  color: #0a0a0a;
+}
+
+.best-sellers .item .products .heart input:checked~label svg {
+  color: #e60b0b;
+}
 
 .best-sellers .item .products .heart p {
   margin: 0;
@@ -436,29 +455,32 @@ input {
 }
 
 
-.best-sellers .b-btn {
+/* .best-sellers .b-btn a{
   text-align: center;
-}
-
-.best-sellers .b-btn  {
   background-color: var(--black-color);
   color: var(--white-color);
   margin: 70px 0;
-}
+} */
 
-#other-product{
-background-color: brown;
+.show-more {
+  position: relative;
+  bottom: 20px;
+  left: 0;
+  text-align: center;
+  background-color: var(--black-color);
+  color: var(--white-color);
+  margin: var(--section-distance) 0;
+  padding: 16px 40px;
+  display: inline-block;
 }
 
 .best-sellers .other-products {
   display: none;
 }
 
-/* .best-sellers .foo {
-  background-color: blueviolet;
-} */
 
-.best-sellers input:checked~ .other-products {
+.best-sellers input:checked~.other-products {
+  margin-top: var(--section-distance);
   display: block;
 }
 
@@ -652,7 +674,7 @@ footer {
     height: auto;
     /* border: 5px salmon solid; */
     margin: 0;
-    
+
   }
 
   .hero .left p:nth-of-type(1) {
@@ -696,12 +718,14 @@ footer {
 
   .hero .right .inside .man {
     top: -22px;
+    vertical-align: bottom;
   }
 
   .hero ul {
     text-align: center;
-    position: relative;
-    bottom: 110px;
+    position: absolute;
+    left: 141px;
+    bottom: 100px;
   }
 
   .hero ul li {
@@ -722,6 +746,7 @@ footer {
   }
 
   .brands ul {
+    margin-top: -22px;
     justify-content: space-between;
     padding: 12px;
 
@@ -776,7 +801,14 @@ footer {
   }
 
   .best-sellers {
-    padding: 0 var(--mobile-padding) var(--section-distance) var(--mobile-padding);
+    /* padding: 0 var(--mobile-padding) var(--section-distance) var(--mobile-padding); */
+    padding: 0 0 var(--section-distance) 0;
+  }
+
+  .best-sellers .product .col,
+  .best-sellers h3 {
+    padding-left: var(--mobile-padding);
+    padding-right: var(--mobile-padding);
   }
 
   .product-wrapper {
